@@ -100,7 +100,7 @@ export const WordEditor = () => {
         openColorPicker("color");
       });
     },
-    action: function (core) {
+    action: function () {
       // You can open your picker here too if you want
       openColorPicker("color");
     },
@@ -118,7 +118,7 @@ export const WordEditor = () => {
         openColorPicker("backgroundColor");
       });
     },
-    action: function (core) {
+    action: function () {
       // You can open your picker here too if you want
       openColorPicker("backgroundColor");
     },
@@ -277,7 +277,7 @@ export const WordEditor = () => {
           style={{
             height: "100%",
             borderBottom: "none",
-           
+
             transform: "translateX(0)",
             // overflowX:"-moz-hidden-unscrollable"
           }}
