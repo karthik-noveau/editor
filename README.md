@@ -32,49 +32,36 @@ yarn add @skynoveau-ui/editor
 ## 🚀 Usage
 
 ```jsx
-import Editor from "@skynoveau-ui/editor";
-
-export const Home = () => {
-  function handleEditorClick() {
-    console.log("Editor is clicked");
-  }
-  function handleHtmlClick() {
-    console.log("Html is clicked");
-  }
-  function handleEditorChange(content) {
-    console.log(content);
-  }
-  function handleHtmlChange(Htmlcontent) {
-    console.log(Htmlcontent);
-  }
-
-  return (
-    <Editor showHeader={true}>
-      <Editor.word onChange={handleEditorChange} onClick={handleEditorClick} />
-      <Editor.html onChange={handleHtmlChange} onClick={handleHtmlClick} />
-      <Editor.preview />
-    </Editor>
-  );
-};
+return (
+  <Editor>
+    <Editor.word />
+    <Editor.html />
+    <Editor.preview />
+  </Editor>
+);
 ```
 
 ---
 
-## 🔧 Editor Props
+## `<Editor/>` Props
 
 | Prop         | Type      | Description                 |
 | ------------ | --------- | --------------------------- |
 | `showHeader` | `boolean` | Show/hide the editor header |
 
-### `<Editor.word />` and `<Editor.html />` Props
+### `<Editor.html />` Props
 
-| Prop          | Type                        | Description                         |
-| ------------- | --------------------------- | ----------------------------------- |
-| `onChange`    | `(content: string) => void` | Callback with editor content        |
-| `onClick`     | `() => void`                | Callback when editor is clicked     |
-| `initialHtml` | `string`                    | (Optional) Initial HTML content     |
-| `className`   | `string`                    | (Optional) Custom class for styling |
-| `style`       | `React.CSSProperties`       | (Optional) Inline styles            |
+| Prop       | Type                        | Description                     |
+| ---------- | --------------------------- | ------------------------------- |
+| `onChange` | `(content: string) => void` | Callback with editor content    |
+| `onClick`  | `() => void`                | Callback when editor is clicked |
+
+### `<Editor.word />` Props
+
+| Prop       | Type                        | Description                     |
+| ---------- | --------------------------- | ------------------------------- |
+| `onChange` | `(content: string) => void` | Callback with editor content    |
+| `onClick`  | `() => void`                | Callback when editor is clicked |
 
 ### `<Editor.preview />` Props
 
