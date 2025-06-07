@@ -94,9 +94,3 @@ MIT — Free for personal and commercial use.
 ## 🤝 Contributing
 
 Contributions are welcome! Open issues, suggest features, or submit pull requests.
-
----
-
-## 🏷️ Tags
-
-React, HTML Editor, Word to HTML, Rich Text, Paste Clean HTML, @skynoveau-ui/editor

@@ -1,6 +1,6 @@
 {
   "name": "@skynoveau-ui/editor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +9,20 @@
     "publish": "npm run build && npm publish --access public",
     "preview": "vite preview"
   },
+  "keywords": [
+    "react",
+    "editor",
+    "html-editor",
+    "word-to-html",
+    "rich-text-editor",
+    "paste-clean-html",
+    "skynoveau-ui",
+    "skynoveau-ui eidtor",
+    "skynoveau editor",
+    "cms",
+    "react-component",
+    "react-editor"
+  ],
   "dependencies": {
     "@codemirror/lang-html": "^6.4.9",
     "@codemirror/view": "^6.36.5",
