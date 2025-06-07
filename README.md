@@ -30,38 +30,38 @@ yarn add @skynoveau-ui/editor
 ## 🚀 Usage
 
 ```jsx
-return (
-  <Editor>
-    <Editor.word />
-    <Editor.html />
-    <Editor.preview />
-  </Editor>
-);
+<Editor>
+  <Editor.word />
+  <Editor.html />
+  <Editor.preview />
+</Editor>
 ```
 
 ---
 
-## `<Editor/>` Props
+## Editor props
+
+### `<Editor/>`
 
 | Prop         | Type      | Description                 |
 | ------------ | --------- | --------------------------- |
 | `showHeader` | `boolean` | Show/hide the editor header |
 
-### `<Editor.html />` Props
+### `<Editor.html />`
 
 | Prop       | Type                        | Description                     |
 | ---------- | --------------------------- | ------------------------------- |
 | `onChange` | `(content: string) => void` | Callback with editor content    |
 | `onClick`  | `() => void`                | Callback when editor is clicked |
 
-### `<Editor.word />` Props
+### `<Editor.word />`
 
 | Prop       | Type                        | Description                     |
 | ---------- | --------------------------- | ------------------------------- |
 | `onChange` | `(content: string) => void` | Callback with editor content    |
 | `onClick`  | `() => void`                | Callback when editor is clicked |
 
-### `<Editor.preview />` Props
+### `<Editor.preview />`
 
 _No props required. Renders a live preview of the HTML content._
 
