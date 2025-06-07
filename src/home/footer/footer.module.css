@@ -1,0 +1,74 @@
+.footerWrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #0000000d;
+  margin-top: 60px;
+  padding: 50px 0;
+}
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.githubIcon {
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #bababa;
+  transition: 0.3s all;
+}
+.githubIcon:hover {
+  color: #001c3e;
+}
+
+.profileContainer {
+  display: flex;
+  gap: 20px;
+  padding: 8px 30px;
+  border-radius: 10px;
+  background-color: #e3e3e3;
+}
+.profileItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.profileItem img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+.imageContainer {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+.profileItem:hover img {
+  transform: scale(1.2);
+}
+.profileItem p {
+  color: #363636;
+  transition: 0.3s all;
+}
+.profileItem p:hover {
+  color: black;
+}
+
+.copyRights {
+  margin-top: 48px;
+  color: #1f1f1f;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 300;
+  letter-spacing: 0.2px;
+  width: 90%;
+  text-align: center;
+}

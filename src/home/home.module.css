@@ -1,0 +1,10 @@
+.editorWrapper {
+  display: flex;
+  justify-content: center;
+}
+.editorContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

@@ -1,0 +1,41 @@
+.headerContainer {
+  width: 90%;
+  margin-bottom: 8px;
+  display: flex;
+  list-style: none;
+  justify-content: start;
+  align-items: center;
+  height: 40px;
+  font-size: 14px;
+  padding: 0;
+}
+
+.headerContainer li:hover {
+  cursor: pointer;
+}
+
+.headerContainer li {
+  color: #006ef4;
+  display: grid;
+  padding: 0px 20px;
+  margin-right: 10px;
+  letter-spacing: 1px;
+  height: 40px;
+  place-items: center;
+  border-radius: 4px;
+  background-color: #dce9ff;
+}
+.headerContainer li:hover {
+  background-color: #c6dbfe;
+  transition: 0.2s all linear;
+}
+.headerContainer li.active {
+  color: #fff;
+  background: #006ef4;
+}
+@media screen and (max-width: 340px) {
+ .headerContainer li {
+    padding: 0px 15px;
+    font-size: 13px;
+  }
+} 

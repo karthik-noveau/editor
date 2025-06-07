@@ -1,0 +1,140 @@
+:root {
+  --default-color: "#000000";
+  --default-bgcolor: "#ffffff";
+}
+/* Editor toolbar  */
+.sun-editor .se-toolbar {
+  outline: none !important;
+  border: 1px solid #d4d4d4;
+  position: sticky;
+  top: 0;
+
+  height: 10%;
+  border-radius: 4px 4px 0px 0px;
+}
+.sun-editor .se-list-layer.se-list-font-family {
+  height: 300px;
+  overflow: auto;
+}
+/* Editor  container */
+.sun-editor-editable {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: var(--default-color);
+  background-color: var(--default-bgcolor);
+
+  padding: 14px;
+  flex: 1;
+  overflow-y: hidden;
+  overflow: auto;
+}
+
+/* Editor container image */
+.sun-editor-editable img {
+  overflow: auto;
+}
+
+.ͼ1 {
+  height: 100%;
+}
+
+.ͼ16 {
+  background-color: white !important;
+}
+
+.sun-editor {
+  border: none;
+  height: 100% !important;
+}
+.sun-editor .se-container {
+  height: 100%;
+}
+.sun-editor .se-wrapper-inner {
+  overflow-x: hidden !important;
+}
+
+.sun-editor .se-wrapper {
+  height: 90%;
+  overflow-x: hidden;
+  border-left: 1px solid #d4d4d4;
+  border-right: 1px solid #d4d4d4;
+  overflow-y: auto;
+}
+
+.sun-editor-editable p {
+  margin: 0px !important;
+}
+.sun-editor .se-wrapper {
+  height: 90%;
+  overflow: hidden !important;
+}
+.sun-editor .se-resizing-bar {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+
+  margin: auto;
+  border: 1px solid #d4d4d4;
+  border-radius: 0px 0px 4px 4px;
+}
+.se-controller .se-controller-resizing {
+  z-index: 1000;
+}
+.sun-editor .se-list-layer {
+  border: 1px solid #bababa00;
+  box-shadow: 0 3px 9px rgb(0 0 0 / 10%);
+  margin-top: 5px;
+}
+.sun-editor .se-btn-tray {
+  width: calc(100% - 30px);
+}
+/* .sun-editor button *{
+  pointer-events: all;
+} */
+#font-color-container button,
+#background-color-container button {
+  pointer-events: all;
+}
+@media screen and (max-width: 1113px) {
+  .sun-editor .se-toolbar {
+    height: 15%;
+  }
+  .sun-editor .se-wrapper {
+    height: 85%;
+  }
+}
+@media screen and (max-width: 840px) {
+  .sun-editor .se-toolbar {
+    height: 22%;
+  }
+  .sun-editor .se-wrapper {
+    height: 78%;
+    overflow: hidden !important;
+  }
+}
+@media screen and (max-width: 637px) {
+  .sun-editor .se-toolbar {
+    height: 28%;
+  }
+  .sun-editor .se-wrapper {
+    height: 72%;
+  }
+}
+
+@media screen and (max-width: 356px) {
+  .sun-editor .se-toolbar {
+    height: 35%;
+  }
+  .sun-editor .se-wrapper {
+    height: 65%;
+  }
+}
+@media screen and (max-width: 345px) {
+  .sun-editor .se-toolbar {
+    height: 42%;
+  }
+  .sun-editor .se-wrapper {
+    height: 58%;
+  }
+}
