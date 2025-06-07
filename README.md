@@ -1,16 +1,16 @@
 # @skynoveau/editor
 
-A modern, lightweight **Word to HTML editor** built with React. Easily paste Microsoft Word or rich text content and get clean, editable, and semantic HTML output. Ideal for CMS integrations, admin panels, or any application needing clean HTML from rich text.
+A modern, lightweight **Word to HTML editor** for React. Effortlessly paste content from Microsoft Word or rich text sources and receive clean, semantic, and editable HTML. Perfect for CMS integrations, admin panels, or any app needing reliable HTML from pasted rich text.
 
 ---
 
 ## ✨ Features
 
-- 📄 Paste content from Microsoft Word, Google Docs, or web
-- ✨ Clean, semantic HTML output
-- 🧼 Auto-remove unwanted Word styles and tags
-- 💡 Supports inline editing
-- 🎯 Built with React — easy to integrate
+- 📄 Paste from Microsoft Word, Google Docs, or the web
+- ✨ Produces clean, semantic HTML
+- 🧼 Automatically removes unwanted styles and tags
+- 💡 Inline editing support
+- 🎯 Built with React for easy integration
 - ⚙️ Fully customizable
 
 ---
@@ -32,36 +32,45 @@ yarn add @skynoveau/editor
 ## 🚀 Usage
 
 ```tsx
-import React from 'react';
-import { Editor } from '@skynoveau/editor';
-import '@skynoveau/editor/editor/editor.module.css';
-import '@skynoveau/editor/editor/editor.override.css';
+import React from "react";
+import { Editor } from "@skynoveau/editor";
+import "@skynoveau/editor/editor/editor.module.css";
+import "@skynoveau/editor/editor/editor.override.css";
 
-function App() {
-  const handleChange = (html: string) => {
-    console.log("Clean HTML:", html);
-  };
+export const Home = () => {
+  function handleEditorClick() {
+    console.log("Editor clicked");
+  }
+  function handleHtmlClick() {
+    console.log("HTML clicked");
+  }
+  function handleEditorChange(content: string) {
+    console.log("Word Editor Content:", content);
+  }
+  function handleHtmlChange(htmlContent: string) {
+    console.log("HTML Editor Content:", htmlContent);
+  }
 
   return (
-    <div style={{ padding: 20 }}>
-      <Editor onChange={handleChange} />
-    </div>
+    <Editor showHeader={true}>
+      <Editor.word onChange={handleEditorChange} onClick={handleEditorClick} />
+      <Editor.html onChange={handleHtmlChange} onClick={handleHtmlClick} />
+      <Editor.preview />
+    </Editor>
   );
-}
-
-export default App;
+};
 ```
 
 ---
 
 ## 🔧 Props
 
-| Prop          | Type                      | Description                              |
-|---------------|---------------------------|------------------------------------------|
-| `onChange`    | `(html: string) => void`  | Callback with cleaned HTML output        |
-| `initialHtml` | `string`                  | (Optional) Initial HTML content          |
-| `className`   | `string`                  | (Optional) Custom class for styling      |
-| `style`       | `React.CSSProperties`     | (Optional) Inline styles                 |
+| Prop          | Type                     | Description                         |
+| ------------- | ------------------------ | ----------------------------------- |
+| `onChange`    | `(html: string) => void` | Callback with cleaned HTML output   |
+| `initialHtml` | `string`                 | (Optional) Initial HTML content     |
+| `className`   | `string`                 | (Optional) Custom class for styling |
+| `style`       | `React.CSSProperties`    | (Optional) Inline styles            |
 
 ---
 
@@ -98,7 +107,7 @@ editor/
 
 ## 🛠️ Build & Publish
 
-To include CSS and folders in the final npm package:
+To include CSS and folders in your npm package:
 
 ### 1. Add to `package.json`
 
@@ -112,15 +121,15 @@ To include CSS and folders in the final npm package:
 }
 ```
 
-> `cpx` is used to copy `.css` files into the `dist` folder for npm packaging:
+> Use `cpx` to copy `.css` files into `dist` for npm packaging.  
 > Install with:  
 > `npm install --save-dev cpx`
 
 ### 2. Import Styles in Components
 
 ```jsx
-import './editor.module.css';
-import './editor.override.css';
+import "./editor.module.css";
+import "./editor.override.css";
 ```
 
 ---
@@ -133,7 +142,7 @@ MIT — Free for personal and commercial use.
 
 ## 🤝 Contributing
 
-We welcome contributions! Feel free to open issues, suggest features, or submit pull requests.
+Contributions are welcome! Open issues, suggest features, or submit pull requests.
 
 ---
 
