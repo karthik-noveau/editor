@@ -1,12 +1,12 @@
 {
-  "name": "skynoveau-editor",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@skynoveau/editor",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "publish": "npm run build && npm publish --access public",
     "preview": "vite preview"
   },
   "dependencies": {

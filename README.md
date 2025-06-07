@@ -1,12 +1,142 @@
-# React + Vite
+# @skynoveau/editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, lightweight **Word to HTML editor** built with React. Easily paste Microsoft Word or rich text content and get clean, editable, and semantic HTML output. Ideal for CMS integrations, admin panels, or any application needing clean HTML from rich text.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 📄 Paste content from Microsoft Word, Google Docs, or web
+- ✨ Clean, semantic HTML output
+- 🧼 Auto-remove unwanted Word styles and tags
+- 💡 Supports inline editing
+- 🎯 Built with React — easy to integrate
+- ⚙️ Fully customizable
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📦 Installation
+
+```bash
+npm install @skynoveau/editor
+```
+
+or
+
+```bash
+yarn add @skynoveau/editor
+```
+
+---
+
+## 🚀 Usage
+
+```tsx
+import React from 'react';
+import { Editor } from '@skynoveau/editor';
+import '@skynoveau/editor/editor/editor.module.css';
+import '@skynoveau/editor/editor/editor.override.css';
+
+function App() {
+  const handleChange = (html: string) => {
+    console.log("Clean HTML:", html);
+  };
+
+  return (
+    <div style={{ padding: 20 }}>
+      <Editor onChange={handleChange} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+---
+
+## 🔧 Props
+
+| Prop          | Type                      | Description                              |
+|---------------|---------------------------|------------------------------------------|
+| `onChange`    | `(html: string) => void`  | Callback with cleaned HTML output        |
+| `initialHtml` | `string`                  | (Optional) Initial HTML content          |
+| `className`   | `string`                  | (Optional) Custom class for styling      |
+| `style`       | `React.CSSProperties`     | (Optional) Inline styles                 |
+
+---
+
+## 🧪 Example Output
+
+**Paste from Word:**
+
+```
+My Bold Text with header and footers
+```
+
+**Clean HTML Output:**
+
+```html
+<p><strong>My Bold Text</strong> with header and footers</p>
+```
+
+---
+
+## 🏗️ Folder Structure
+
+```
+editor/
+  header/
+  html-editor/
+  ui-preview/
+  word-editor/
+  editor.module.css
+  editor.override.css
+  index.jsx
+```
+
+---
+
+## 🛠️ Build & Publish
+
+To include CSS and folders in the final npm package:
+
+### 1. Add to `package.json`
+
+```json
+"files": [
+  "dist",
+  "editor"
+],
+"scripts": {
+  "build": "rimraf dist && tsc && cpx \"src/editor/**/*.css\" dist/editor"
+}
+```
+
+> `cpx` is used to copy `.css` files into the `dist` folder for npm packaging:
+> Install with:  
+> `npm install --save-dev cpx`
+
+### 2. Import Styles in Components
+
+```jsx
+import './editor.module.css';
+import './editor.override.css';
+```
+
+---
+
+## 📜 License
+
+MIT — Free for personal and commercial use.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Feel free to open issues, suggest features, or submit pull requests.
+
+---
+
+## 🏷️ Tags
+
+React, HTML Editor, Word to HTML, Rich Text, Paste Clean HTML, @skynoveau/editor
