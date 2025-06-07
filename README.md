@@ -1,5 +1,3 @@
-# @skynoveau-ui/editor
-
 A modern, lightweight **Word to HTML editor** for React. Effortlessly paste content from Microsoft Word or rich text sources and receive clean, semantic, and editable HTML. Perfect for CMS integrations, admin panels, or any app needing reliable HTML from pasted rich text.
 
 ---
