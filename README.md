@@ -31,24 +31,21 @@ yarn add @skynoveau/editor
 
 ## 🚀 Usage
 
-```tsx
-import React from "react";
-import { Editor } from "@skynoveau/editor";
-import "@skynoveau/editor/editor/editor.module.css";
-import "@skynoveau/editor/editor/editor.override.css";
+```jsx
+import Editor from "@skynoveau/editor";
 
 export const Home = () => {
   function handleEditorClick() {
-    console.log("Editor clicked");
+    console.log("Editor is clicked");
   }
   function handleHtmlClick() {
-    console.log("HTML clicked");
+    console.log("Html is clicked");
   }
-  function handleEditorChange(content: string) {
-    console.log("Word Editor Content:", content);
+  function handleEditorChange(content) {
+    console.log(content);
   }
-  function handleHtmlChange(htmlContent: string) {
-    console.log("HTML Editor Content:", htmlContent);
+  function handleHtmlChange(Htmlcontent) {
+    console.log(Htmlcontent);
   }
 
   return (
@@ -63,14 +60,25 @@ export const Home = () => {
 
 ---
 
-## 🔧 Props
+## 🔧 Editor Props
 
-| Prop          | Type                     | Description                         |
-| ------------- | ------------------------ | ----------------------------------- |
-| `onChange`    | `(html: string) => void` | Callback with cleaned HTML output   |
-| `initialHtml` | `string`                 | (Optional) Initial HTML content     |
-| `className`   | `string`                 | (Optional) Custom class for styling |
-| `style`       | `React.CSSProperties`    | (Optional) Inline styles            |
+| Prop         | Type      | Description                 |
+| ------------ | --------- | --------------------------- |
+| `showHeader` | `boolean` | Show/hide the editor header |
+
+### `<Editor.word />` and `<Editor.html />` Props
+
+| Prop          | Type                        | Description                         |
+| ------------- | --------------------------- | ----------------------------------- |
+| `onChange`    | `(content: string) => void` | Callback with editor content        |
+| `onClick`     | `() => void`                | Callback when editor is clicked     |
+| `initialHtml` | `string`                    | (Optional) Initial HTML content     |
+| `className`   | `string`                    | (Optional) Custom class for styling |
+| `style`       | `React.CSSProperties`       | (Optional) Inline styles            |
+
+### `<Editor.preview />` Props
+
+_No props required. Renders a live preview of the HTML content._
 
 ---
 
@@ -86,50 +94,6 @@ My Bold Text with header and footers
 
 ```html
 <p><strong>My Bold Text</strong> with header and footers</p>
-```
-
----
-
-## 🏗️ Folder Structure
-
-```
-editor/
-  header/
-  html-editor/
-  ui-preview/
-  word-editor/
-  editor.module.css
-  editor.override.css
-  index.jsx
-```
-
----
-
-## 🛠️ Build & Publish
-
-To include CSS and folders in your npm package:
-
-### 1. Add to `package.json`
-
-```json
-"files": [
-  "dist",
-  "editor"
-],
-"scripts": {
-  "build": "rimraf dist && tsc && cpx \"src/editor/**/*.css\" dist/editor"
-}
-```
-
-> Use `cpx` to copy `.css` files into `dist` for npm packaging.  
-> Install with:  
-> `npm install --save-dev cpx`
-
-### 2. Import Styles in Components
-
-```jsx
-import "./editor.module.css";
-import "./editor.override.css";
 ```
 
 ---
