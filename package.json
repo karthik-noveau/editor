@@ -1,7 +1,12 @@
 {
   "name": "@skynoveau-ui/editor",
-  "version": "0.0.10",
+  "version": "0.0.12",
   "type": "module",
+  "homepage": "https://editor.skynoveau.in",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karthik-noveau/skynoveau-editor.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -48,5 +53,17 @@
     "globals": "^15.15.0",
     "vite": "^6.2.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Karthik Noveau",
+      "email": "karthik5112001@gmail.com",
+      "url": "https://github.com/karthik-noveau"
+    },
+    {
+      "name": "Madhu",
+      "email": "madhushree1530@gmail.com",
+      "url": "https://github.com/Madhugit15"
+    }
+  ]
 }
